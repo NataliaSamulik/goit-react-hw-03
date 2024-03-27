@@ -1,7 +1,6 @@
 import { useId } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import 'yup-phone';
 
 import css from './ContactForm.module.css';
 
