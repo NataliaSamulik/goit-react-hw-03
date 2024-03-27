@@ -14,9 +14,9 @@ const valuesArr = [
 
 function App() {
   const [values, setValues] = useState(() => {
-    const sevedValues = JSON.parse(window.localStorage.getItem('values'));
-    if (sevedValues.length !== 0) {
-      return sevedValues;
+    const sevedValues = window.localStorage.getItem('values');
+    if (sevedValues !== null) {
+      return JSON.parse(sevedValues);
     }
     return valuesArr;
   });
@@ -24,16 +24,16 @@ function App() {
   const [search, setSearch] = useState('');
 
   const addContact = data => {
-    setValues([
+    setValues(values => [
       ...values,
       { id: nanoid(), name: data.name, number: data.number },
     ]);
   };
 
   const onDeleteContact = id => {
-    setValues(prevValues => {
-      return prevValues.filter(value => value.id !== id);
-    });
+    setValues(prevValues => 
+      prevValues.filter(value => value.id !== id)
+    );
   };
 
   useEffect(() => {
