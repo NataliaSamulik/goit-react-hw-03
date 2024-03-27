@@ -1,0 +1,9 @@
+.filterBlock{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.inputFilter{
+    width: 30%;
+}

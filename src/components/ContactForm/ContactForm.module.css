@@ -1,0 +1,23 @@
+.form {
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 14px;
+}
+
+.btnForm{
+  cursor: pointer;
+}
